@@ -3,8 +3,6 @@ package backend;
 
 import java.util.Stack;
 
-// import javax.swing.text.Position;
-
 public class GameEngin {
     private backGround board;
     private gameShapes GameShapes;
@@ -13,7 +11,6 @@ public class GameEngin {
     public GameEngin() {
         this.board = FlyWeightFactory.getbackGround(p);
         GameShapes = gameShapes.X;
-        // this.p = SingletonPostions.getInstance();
     }
 
     public void setPlace(GamePostion postion) {
@@ -57,7 +54,7 @@ public class GameEngin {
         }
         return freePlaces;
     }
-// SingletonPostions.getinstance(row, col)
+
     public gameShapes getcurrentPlayer() {
         return GameShapes;
     }
