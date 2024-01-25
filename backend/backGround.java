@@ -2,6 +2,7 @@ package backend;
 
 public class backGround {
     private gameShapes[][] ShapeInboard;
+    public int length;
 
     public backGround() {
         ShapeInboard = new gameShapes[3][3];

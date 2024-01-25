@@ -1,6 +1,6 @@
 package backend;
 
-public class TwoPlayers {
+public class TwoPlayers extends Player{
     GameEngin g;
     ObserverGame o;
     private int row;
@@ -11,6 +11,7 @@ public class TwoPlayers {
         this.o = o;
     }
 
+    @Override
     public void play(int r, int c) {
         row = r;
         col = c;

@@ -2,7 +2,7 @@ package backend;
 
 import java.util.Random;
 
-public class OnePlayer {
+public class OnePlayer extends Player {
     GameEngin g;
     ObserverGame o;
     private int row;
@@ -14,6 +14,7 @@ public class OnePlayer {
         this.o = o;
     }
 
+    @Override
     public void play(int r, int c) {
         row = r;
         col = c;
