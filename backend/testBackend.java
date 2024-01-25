@@ -1,6 +1,7 @@
 package backend;
 
 import java.util.Scanner;
+import frontend.TicTacToeGUI;
 
 public class testBackend {
     public static void main(String[] args) {
@@ -36,13 +37,9 @@ public class testBackend {
         }
         // twoPlayers.play(i);
       
-import frontend.TicTacToeGUI;
 
-public class testBackend {
-    public static void main(String[] args) {
         
         new TicTacToeGUI().setVisible(true);
-        TwoPlayers twoPlayers = new TwoPlayers();
 
-    }
-}
+    
+}}
