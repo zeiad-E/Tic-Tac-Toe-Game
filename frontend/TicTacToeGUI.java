@@ -23,9 +23,31 @@ public class TicTacToeGUI extends JFrame {
                 buttons[i][j] = new JButton();
                 buttons[i][j].setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 40));
                 buttons[i][j].setFocusPainted(false);
-               // buttons[i][j].addActionListener(new ButtonClickListener(i, j));
                 add(buttons[i][j]);
             }
         }
     }
+
+    // New method to update the GUI based on the backend data
+    public void updateGUI(char[][] board) {
+        if (board.length != 3 || board[0].length != 3) {
+            throw new IllegalArgumentException("Invalid board dimensions");
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == 'X') {
+                    buttons[i][j].setIcon(new ImageIcon("x.png"));
+                } else if (board[i][j] == 'O') {
+                    buttons[i][j].setIcon(new ImageIcon("o.png"));
+                } else {
+                    buttons[i][j].setIcon(null);
+                }
+                buttons[i][j].setDisabledIcon(buttons[i][j].getIcon());
+                buttons[i][j].setEnabled(false);
+            }
+        }
+    }
+
+    
 }
